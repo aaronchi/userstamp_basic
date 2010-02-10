@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "userstamp_basic"
     gem.summary = %Q{A simplified version of UserStamp}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{Provides a simple userstamp to models... automatically updates created_by and updated_by based on the current user.}
     gem.email = "dbock@codesherpas.com"
     gem.homepage = "http://github.com/bokmann/userstamp_basic"
     gem.authors = ["bokmann"]

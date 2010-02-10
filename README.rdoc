@@ -1,6 +1,26 @@
 = userstamp_basic
 
-Description goes here.
+Rails provides some really nice helpers for adding date/time stamps to your models...  wouldn't it be nice if it could do the same for setting updated_by and created_by for the current user?  It can!  Here it is.
+
+1. Include the gem
+2. in your model's migration just add a line like:
+     t.userstamps
+   paralling the way timestamps work.
+3. In your model just declare 'stampable' someplace.
+
+Oh - you'll also need the sentient_user gem.
+
+== What's wrong with DeLynn Berry's UserStamp?
+http://github.com/delynn/userstamp
+
+Not a thing!  I have used it for a while and like it a lot.  I just wanted a few things, namely:
+1. Reliance on the sentient_user gem, so that ugliness is pulled into one place.
+2. Simplified code.  The original UserStamp has grown to support two different modes, the ability to make any class the 'stampable' class, etc.  If you need all that, great!  But if you don't, its a lot of mental overhead to deal with.  This stripped down version offers a lot less functionality but with a lot less meta and the ability to wrap your head around it all in a few minutes.
+
+== ToDo
+This needs some testing.  It has tests in the project I just pulled it out of, but now it needs its own little internal rails project to give it its own test coverage (see the original UserStamp or my own StonePath library to see how to do this).  I'll get to it, but not as part of my day-job.  If you want to contribute, I'm accepting patches.
+
+There is specifically no new functionality on this todo list.  If you want more functionality, use DeLynn's UserStamp above.  This exists solely for the value of the simplicity it provides.  Without that simplicity, this gem provides no value.
 
 == Note on Patches/Pull Requests
  
