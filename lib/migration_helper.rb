@@ -6,10 +6,11 @@ module Sherpa
       end
 
       module InstanceMethods
-        def userstamps
+        def userstamps(include_deleted_by = false)
           puts "creating userstamps"
-          column(:created_by_id, :integer)
-          column(:updated_by_id, :integer)
+          column(:creator_id, :integer)
+          column(:updater_id, :integer)
+          column(:deleter_id, :integer) if include_deleted_by
         end
       end
     end
